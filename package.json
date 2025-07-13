@@ -1,13 +1,22 @@
 {
   "name": "fgp-google-sheet-app",
   "version": "1.0.0",
-  "description": "",
+  "description": "Aplicación Node.js para interactuar con Google Sheets API. Permite enviar datos, obtener encabezados, listar hojas y realizar operaciones CRUD en hojas de cálculo.",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js",
-    "dev": "node --watch index.js"
+    "start": "node start.js",
+    "dev": "node --watch start.js",
+    "diagnose": "node diagnose.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
+  "keywords": [
+    "google-sheets",
+    "api",
+    "nodejs",
+    "express",
+    "spreadsheet",
+    "crud"
+  ],
   "author": "",
   "license": "ISC",
   "type": "commonjs",
@@ -17,5 +26,8 @@
     "express": "^5.1.0",
     "googleapis": "^152.0.0",
     "morgan": "^1.10.0"
+  },
+  "engines": {
+    "node": ">=14.0.0"
   }
 }
