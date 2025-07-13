@@ -9,7 +9,11 @@ class SheetService {
     
     this.auth = new google.auth.GoogleAuth({
       keyFile: "credentials.json",
-      scopes: ["https://www.googleapis.com/auth/spreadsheets"],
+      scopes: [
+        "https://www.googleapis.com/auth/spreadsheets",
+        "https://www.googleapis.com/auth/calendar",
+        "https://www.googleapis.com/auth/calendar.events"
+      ],
     });
   }
 
