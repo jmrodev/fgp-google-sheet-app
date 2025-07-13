@@ -40,4 +40,14 @@ Content-Type: application/json
 ### FIND - Buscar por correo
 GET http://localhost:3000/find/Hoja 1?correo=nuevo@email.com
 
+### Enviar correo
+POST http://localhost:3000/gmail/send
+Content-Type: application/json
+
+{
+  "to": "test@example.com",
+  "subject": "Correo de prueba",
+  "text": "Este es un correo de prueba desde la API."
+}
+
 
