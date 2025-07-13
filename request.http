@@ -1,0 +1,43 @@
+
+### POST - Agregar datos a hoja 'Hoja1'
+POST http://localhost:3000/send/Hoja1
+Content-Type: application/json
+
+{
+  "nombre": "Frank",
+  "correo": "frank@example.com",
+  "mensaje": "Hola mundo"
+}
+
+### HEADERS - Obtener nombres de columnas
+GET http://localhost:3000/headers/Hoja1
+
+### HEADERS - Crear encabezados si no existen en Hoja1
+POST http://localhost:3000/headers/Hoja1
+Content-Type: application/json
+
+{
+  "headers": ["fecha", "nombre", "correo", "mensaje"]
+}
+
+### GET - Listar hojas
+GET http://localhost:3000/sheets
+
+### GET - Obtener datos de hoja 'Hoja1'
+GET http://localhost:3000/data/Hoja1
+
+### DELETE - Eliminar fila 2 de hoja 'Hoja1'
+DELETE http://localhost:3000/delete/Hoja1/2
+
+### PUT - Actualizar fila 2
+PUT http://localhost:3000/update/Hoja1/2
+Content-Type: application/json
+
+{
+  "values": ["2025-07-08", "Frank", "nuevo@email.com", "mensaje actualizado"]
+}
+
+### FIND - Buscar por correo
+GET http://localhost:3000/find/Hoja1?correo=nuevo@email.com
+
+
