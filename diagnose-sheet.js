@@ -94,5 +94,4 @@ async function diagnoseGoogleSheets() {
   console.log('   - GOOGLE_SHEET_ID:', sheetId);
 }
 
-// Ejecutar diagnóstico
 diagnoseGoogleSheets().catch(console.error); 
